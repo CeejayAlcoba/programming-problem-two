@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import { GetAllEmployee } from "../../services/EmployeeService";
 import { DeleteModal } from "./DeleteEmployee";
-import { SaveEmployee, UpdateEmployee } from "./SaveEmployee";
+import { Add } from "./Add";
+import { Update } from "./Update";
 export function EmployeeTable() {
 const[data,setData]=useState([]);
 const[showModal, setShowModal]=useState(false);
@@ -13,7 +13,7 @@ setData(res.data)
 },[data])
     return <div className="d-flex flex-column min-vh-100 text-center p-5">
         <div className="d-flex justify-content-end">
-        <SaveEmployee/>
+        <Add/>
         </div>
         <div className="d-flex justify-content-center">
             <table class="table">
@@ -40,7 +40,7 @@ setData(res.data)
                             <td>{val.birthday}</td>
                             <td>{val.position.type}</td>
                             <td>
-                                <SaveEmployee data={val}/>
+                                <Update data={val}/>
                                 {val.employeeId==1? null: <DeleteModal data={val}/>}
                             </td>
                         </tr>

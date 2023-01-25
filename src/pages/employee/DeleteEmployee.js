@@ -23,7 +23,7 @@ export function DeleteModal(props) {
                 <Modal.Header closeButton>
                     <Modal.Title>Are you sure you want to delete?</Modal.Title>
                 </Modal.Header>
-                <div className='d-flex justify-content-center'>
+                <div className='d-flex justify-content-center p-5'>
                 <table className='table'>
                     <tr>
                         <th scope="row">Username:</th>

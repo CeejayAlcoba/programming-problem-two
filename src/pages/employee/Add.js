@@ -3,8 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import React from 'react';
 import { AddEmployee, GetAllEmployee } from '../../services/EmployeeService';
-import { GetAllPosition } from '../../services/PositionService';
-export class SaveEmployee extends React.Component {
+export class Add extends React.Component {
     state = {
         data: {
             credential:{
@@ -81,12 +80,12 @@ export class SaveEmployee extends React.Component {
                         </div>
                     </div>
                     <Modal.Footer>
-                        <Button variant="secondary" onClick={() => {this.handleClose(); this.handleAddEmployee();}}>
-                            Close
-                        </Button>
-                        <Button variant="primary" onClick={() => this.handleClose()}>
-                            Save Changes
-                        </Button>
+                        <button className='btn btn-outline-success rounded-pill' onClick={() => {this.handleClose(); this.handleAddEmployee();}}>
+                            Add
+                        </button>
+                        <button className='btn btn-outline-danger rounded-pill' onClick={() => this.handleClose()}>
+                            Cancel
+                        </button>
                     </Modal.Footer>
                 </Modal>
             </>

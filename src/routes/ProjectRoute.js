@@ -4,6 +4,7 @@ import { DeleteModal } from "../pages/employee/DeleteEmployee";
 import { EmployeeTable } from "../pages/employee/EmployeeTable";
 import { Home } from "../pages/Home";
 import { Login } from "../pages/Login";
+import { Logout } from "../pages/Logout";
 import { SignUp } from "../pages/SignUp";
 export default function ProjectRoute() {
   return (
@@ -11,9 +12,10 @@ export default function ProjectRoute() {
       <Routes>
         <Route path="login" element={<Login />}/>
         <Route path="signup" element={<SignUp />}/>
-        <Route path="home" element={<Home />}/>
-        <Route path="*" element={<EmployeeTable />}/>
+        <Route path="*" element={<Home />}/>
+        <Route path="employee" element={<EmployeeTable />}/>
         <Route path="delete-employee" element={<DeleteModal/>}/>
+        <Route path="logout" element={<Logout />}/>
       </Routes>
     </BrowserRouter>
   );
