@@ -38,7 +38,7 @@ export class Add extends React.Component {
     render() {
         return (
             <>
-                <button className='btn btn-outline-success rounded-pill' onClick={() => { this.handleShow(); this.handlePosition() }}>
+                <button className='btn btn-outline-primary rounded-pill' onClick={() => { this.handleShow(); this.handlePosition() }}>
                     Create
                 </button>
                 <Modal show={this.state.show} onHide={() => this.handleClose()} backdrop="static">
@@ -80,7 +80,7 @@ export class Add extends React.Component {
                         </div>
                     </div>
                     <Modal.Footer>
-                        <button className='btn btn-outline-success rounded-pill' onClick={() => {this.handleClose(); this.handleAddEmployee();}}>
+                        <button className='btn btn-outline-primary rounded-pill' onClick={() => {this.handleClose(); this.handleAddEmployee();}}>
                             Add
                         </button>
                         <button className='btn btn-outline-danger rounded-pill' onClick={() => this.handleClose()}>

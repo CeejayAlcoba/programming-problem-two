@@ -34,7 +34,7 @@ await AccountLogin(this.state.data).then((res)=>{
                         <input type="password" className="form-control" value={this.state.data.password} onChange={(e) => this.handleData("password", e.target.value, true)} />
                         <label className="form-label">Password</label>
                     </div>
-                    <button className='btn btn-outline-success rounded-pill m-2' onClick={() => {this.handleLogIn()}}>
+                    <button className='btn btn-outline-primary rounded-pill m-2' onClick={() => {this.handleLogIn()}}>
                         Log in
                     </button>
                     <div class="text-center">

@@ -72,7 +72,7 @@ export class SignUp extends React.Component {
                             <input type="password" className="form-control" value={this.state.data.credential.password} onChange={(e) => this.handleData("password", e.target.value, true)} />
                             <label className="form-label">Password</label>
                         </div>
-                        <button className='btn btn-outline-success rounded-pill m-2' onClick={() => { this.handleClose(); this.handleAddEmployee(); }}>
+                        <button className='btn btn-outline-primary rounded-pill m-2' onClick={() => { this.handleClose(); this.handleAddEmployee(); }}>
                             Sign in
                         </button>
                         <div class="text-center">
